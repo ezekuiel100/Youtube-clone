@@ -23,7 +23,7 @@ const videos = [
 
 function Main() {
   return (
-    <div className="p-4 w-full grid grid-cols-[repeat(auto-fill,minmax(350px,1fr))] gap-4 ">
+    <div className="px-20 lg:px-10 py-4 w-full grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-4 ">
       {videos.map((video, i) => (
         <video className="min-w-16" key={i}>
           <source src={video} type="video/mp4"></source>

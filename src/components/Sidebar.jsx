@@ -15,7 +15,7 @@ const explorer = [
 
 function Sidebar() {
   return (
-    <aside className=" p-2 hidden sm:block">
+    <aside className="p-2 hidden lg:block">
       <div className="pb-2 border-b-2">
         <a
           href="#"
