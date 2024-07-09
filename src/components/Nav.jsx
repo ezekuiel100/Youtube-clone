@@ -7,13 +7,13 @@ import {
 function Nav({ setToggle }) {
   return (
     <div>
-      <nav className="flex justify-between p-4 ">
-        <div className="flex gap-3">
+      <nav className="flex justify-between gap-16 p-4 ">
+        <div className="flex gap-3 flex-shrink-0">
           <Bars3Icon
-            className="h-10 hover:bg-gray-200 p-2 rounded-full cursor-pointer flex-shrink-0"
+            className="h-10 hover:bg-gray-200 p-2 rounded-full cursor-pointer "
             onClick={() => setToggle((toggle) => !toggle)}
           />
-          <a href="/" className="flex-shrink-0">
+          <a href="/" className="">
             <img src="src/assets/logo.png" className="h-10 rounded-full "></img>
           </a>
         </div>
@@ -21,7 +21,7 @@ function Nav({ setToggle }) {
         <input
           type="text"
           placeholder="Buscar video"
-          className="max-w-96 w-full rounded-3xl p-2 px-4 border-[1px] border-gray-300 focus:border-blue-500 outline-none "
+          className="hidden sm:inline max-w-96 w-full rounded-3xl p-2 px-4 border-[1px] border-gray-300 focus:border-blue-500 outline-none"
         />
 
         <div className="flex gap-8">

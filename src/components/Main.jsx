@@ -1,33 +1,190 @@
 const videos = [
-  "src/assets/1.mp4",
-  "src/assets/2.mp4",
-  "src/assets/3.mp4",
-  "src/assets/4.mp4",
-  "src/assets/1.mp4",
-  "src/assets/2.mp4",
-  "src/assets/3.mp4",
-  "src/assets/4.mp4",
-  "src/assets/1.mp4",
-  "src/assets/2.mp4",
-  "src/assets/3.mp4",
-  "src/assets/4.mp4",
-  "src/assets/1.mp4",
-  "src/assets/2.mp4",
-  "src/assets/3.mp4",
-  "src/assets/4.mp4",
-  "src/assets/1.mp4",
-  "src/assets/2.mp4",
-  "src/assets/3.mp4",
-  "src/assets/4.mp4",
+  { thumbnail: "src/assets/gladiator.jpg", video: "", title: "Gladiator II" },
+  {
+    thumbnail: "src/assets/divertidamente.jpg",
+    video: "",
+    title: "Divertida Mente 2 | Trailer Oficial Dublado",
+  },
+  {
+    thumbnail: "src/assets/umbrella.jpg",
+    video: "",
+    title: "The Umbrella Academy | Final Season",
+  },
+  {
+    thumbnail: "src/assets/bandits.jpg",
+    video: "",
+    title: "Time Bandits — Official Trailer | Apple TV+",
+  },
+  { thumbnail: "src/assets/gladiator.jpg", video: "", title: "Gladiator II" },
+  {
+    thumbnail: "src/assets/divertidamente.jpg",
+    video: "",
+    title: "Divertida Mente 2 | Trailer Oficial Dublado",
+  },
+  {
+    thumbnail: "src/assets/umbrella.jpg",
+    video: "",
+    title: "The Umbrella Academy | Final Season",
+  },
+  {
+    thumbnail: "src/assets/bandits.jpg",
+    video: "",
+    title: "Time Bandits — Official Trailer | Apple TV+",
+  },
+  { thumbnail: "src/assets/gladiator.jpg", video: "", title: "Gladiator II" },
+  {
+    thumbnail: "src/assets/divertidamente.jpg",
+    video: "",
+    title: "Divertida Mente 2 | Trailer Oficial Dublado",
+  },
+  {
+    thumbnail: "src/assets/umbrella.jpg",
+    video: "",
+    title: "The Umbrella Academy | Final Season",
+  },
+  {
+    thumbnail: "src/assets/bandits.jpg",
+    video: "",
+    title: "Time Bandits — Official Trailer | Apple TV+",
+  },
+  { thumbnail: "src/assets/gladiator.jpg", video: "", title: "Gladiator II" },
+  {
+    thumbnail: "src/assets/divertidamente.jpg",
+    video: "",
+    title: "Divertida Mente 2 | Trailer Oficial Dublado",
+  },
+  {
+    thumbnail: "src/assets/umbrella.jpg",
+    video: "",
+    title: "The Umbrella Academy | Final Season",
+  },
+  {
+    thumbnail: "src/assets/bandits.jpg",
+    video: "",
+    title: "Time Bandits — Official Trailer | Apple TV+",
+  },
+  { thumbnail: "src/assets/gladiator.jpg", video: "", title: "Gladiator II" },
+  {
+    thumbnail: "src/assets/divertidamente.jpg",
+    video: "",
+    title: "Divertida Mente 2 | Trailer Oficial Dublado",
+  },
+  {
+    thumbnail: "src/assets/umbrella.jpg",
+    video: "",
+    title: "The Umbrella Academy | Final Season",
+  },
+  {
+    thumbnail: "src/assets/bandits.jpg",
+    video: "",
+    title: "Time Bandits — Official Trailer | Apple TV+",
+  },
+  { thumbnail: "src/assets/gladiator.jpg", video: "", title: "Gladiator II" },
+  {
+    thumbnail: "src/assets/divertidamente.jpg",
+    video: "",
+    title: "Divertida Mente 2 | Trailer Oficial Dublado",
+  },
+  {
+    thumbnail: "src/assets/umbrella.jpg",
+    video: "",
+    title: "The Umbrella Academy | Final Season",
+  },
+  {
+    thumbnail: "src/assets/bandits.jpg",
+    video: "",
+    title: "Time Bandits — Official Trailer | Apple TV+",
+  },
+  { thumbnail: "src/assets/gladiator.jpg", video: "", title: "Gladiator II" },
+  {
+    thumbnail: "src/assets/divertidamente.jpg",
+    video: "",
+    title: "Divertida Mente 2 | Trailer Oficial Dublado",
+  },
+  {
+    thumbnail: "src/assets/umbrella.jpg",
+    video: "",
+    title: "The Umbrella Academy | Final Season",
+  },
+  {
+    thumbnail: "src/assets/bandits.jpg",
+    video: "",
+    title: "Time Bandits — Official Trailer | Apple TV+",
+  },
+  { thumbnail: "src/assets/gladiator.jpg", video: "", title: "Gladiator II" },
+  {
+    thumbnail: "src/assets/divertidamente.jpg",
+    video: "",
+    title: "Divertida Mente 2 | Trailer Oficial Dublado",
+  },
+  {
+    thumbnail: "src/assets/umbrella.jpg",
+    video: "",
+    title: "The Umbrella Academy | Final Season",
+  },
+  {
+    thumbnail: "src/assets/bandits.jpg",
+    video: "",
+    title: "Time Bandits — Official Trailer | Apple TV+",
+  },
+  { thumbnail: "src/assets/gladiator.jpg", video: "", title: "Gladiator II" },
+  {
+    thumbnail: "src/assets/divertidamente.jpg",
+    video: "",
+    title: "Divertida Mente 2 | Trailer Oficial Dublado",
+  },
+  {
+    thumbnail: "src/assets/umbrella.jpg",
+    video: "",
+    title: "The Umbrella Academy | Final Season",
+  },
+  {
+    thumbnail: "src/assets/bandits.jpg",
+    video: "",
+    title: "Time Bandits — Official Trailer | Apple TV+",
+  },
+  { thumbnail: "src/assets/gladiator.jpg", video: "", title: "Gladiator II" },
+  {
+    thumbnail: "src/assets/divertidamente.jpg",
+    video: "",
+    title: "Divertida Mente 2 | Trailer Oficial Dublado",
+  },
+  {
+    thumbnail: "src/assets/umbrella.jpg",
+    video: "",
+    title: "The Umbrella Academy | Final Season",
+  },
+  {
+    thumbnail: "src/assets/bandits.jpg",
+    video: "",
+    title: "Time Bandits — Official Trailer | Apple TV+",
+  },
+  { thumbnail: "src/assets/gladiator.jpg", video: "", title: "Gladiator II" },
+  {
+    thumbnail: "src/assets/divertidamente.jpg",
+    video: "",
+    title: "Divertida Mente 2 | Trailer Oficial Dublado",
+  },
+  {
+    thumbnail: "src/assets/umbrella.jpg",
+    video: "",
+    title: "The Umbrella Academy | Final Season",
+  },
+  {
+    thumbnail: "src/assets/bandits.jpg",
+    video: "",
+    title: "Time Bandits — Official Trailer | Apple TV+",
+  },
 ];
 
 function Main() {
   return (
     <div className="px-20 md:px-9 py-4 w-full grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-4 ">
-      {videos.map((video, i) => (
-        <video className="min-w-16" key={i}>
-          <source src={video} type="video/mp4"></source>
-        </video>
+      {videos.map(({ thumbnail, video, title }, i) => (
+        <div key={i}>
+          <img src={thumbnail} className="object-cover" />
+          <p className="text-lg font-semibold">{title}</p>
+        </div>
       ))}
     </div>
   );
