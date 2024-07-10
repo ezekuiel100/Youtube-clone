@@ -7,10 +7,10 @@ function App() {
   const [toggle, setToggle] = useState(true);
 
   return (
-    <div>
+    <div className="relative">
       <Nav setToggle={setToggle} />
-      <div className="flex">
-        {toggle && <Sidebar />}
+      <div className="flex items-start relative">
+        <Sidebar toggle={toggle} setToggle={setToggle} />
         <Main />
       </div>
     </div>

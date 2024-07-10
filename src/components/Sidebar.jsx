@@ -1,4 +1,9 @@
-import { FilmIcon, ForwardIcon, HomeIcon } from "@heroicons/react/24/outline";
+import {
+  Bars3Icon,
+  FilmIcon,
+  ForwardIcon,
+  HomeIcon,
+} from "@heroicons/react/24/outline";
 import { useEffect, useState } from "react";
 
 const explorer = [
@@ -14,15 +19,37 @@ const explorer = [
   "Podcasts",
 ];
 
-function Sidebar() {
+function Sidebar({ toggle, setToggle }) {
   const [screen, setScreen] = useState(window.innerWidth);
 
   useEffect(() => {
-    window.addEventListener("resize", () => setScreen(window.innerWidth));
+    const handleResize = () => setScreen(window.innerWidth);
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
     <>
+      {/* {toggle && (
+        <div className="h-full absolute top-0 bg-red-300 transition-all duration-700">
+          <div className="flex gap-3 flex-shrink-0 p-4">
+            <Bars3Icon
+              className="h-10 hover:bg-gray-200 p-2 rounded-full cursor-pointer "
+              onClick={(toggle) => setToggle(!toggle)}
+            />
+            <a href="/" className="">
+              <img
+                src="src/assets/logo.png"
+                className="h-10 rounded-full "
+              ></img>
+            </a>
+          </div>
+          <LargeSidebar />
+        </div>
+      )} */}
+
       {screen > 1300 && <LargeSidebar />}
       {screen > 800 && screen < 1300 && <SmallSidebar />}
     </>
@@ -31,7 +58,7 @@ function Sidebar() {
 
 function LargeSidebar() {
   return (
-    <aside className="p-2">
+    <aside className="p-2 sticky top-[74px] bg-white ">
       <div className="pb-2 border-b-2">
         <a
           href="#"
@@ -42,14 +69,14 @@ function LargeSidebar() {
         </a>
         <a
           href="#"
-          className="p-2 text-sm lg:text-base flex flex-row items-center gap-2 hover:bg-gray-100 rounded-md transition-all"
+          className="p-2 text-base flex flex-row items-center gap-2 hover:bg-gray-100 rounded-md transition-all"
         >
           <FilmIcon className="h-6" />
           Shorts
         </a>
         <a
           href="#"
-          className="p-2 text-sm lg:text-base flex flex-row items-center gap-2 hover:bg-gray-100 rounded-md transition-all"
+          className="p-2 text-base flex flex-row items-center gap-2 hover:bg-gray-100 rounded-md transition-all"
         >
           <ForwardIcon className="h-6" />
           Subscriptions
@@ -71,9 +98,10 @@ function LargeSidebar() {
     </aside>
   );
 }
+
 function SmallSidebar() {
   return (
-    <aside>
+    <aside className="sticky top-[74px] bg-white ">
       <a
         href="#"
         className="p-2 text-sm hover:bg-gray-100 flex flex-col items-center gap-2 rounded-md transition-all"
