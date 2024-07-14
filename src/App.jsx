@@ -1,11 +1,11 @@
 import Main from "./components/Main";
 import Nav from "./components/Nav";
 import Sidebar from "./components/Sidebar";
-import useResponsiveSidevar from "./hooks/useResponsiveSidevar";
+import useResponsiveSidebar from "./hooks/useResponsiveSidebar";
 
 function App() {
   const { isLargeScreen, isSmallScreen, toggleSidebar, close } =
-    useResponsiveSidevar();
+    useResponsiveSidebar();
 
   return (
     <div className="relative">

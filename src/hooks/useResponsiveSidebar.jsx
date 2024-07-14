@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function useResponsiveSidevar() {
+function useResponsiveSidebar() {
   const [isLargeScreen, setIsLargeScreen] = useState(true);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -35,4 +35,4 @@ function useResponsiveSidevar() {
   return { isLargeScreen, isSmallScreen, close, toggleSidebar };
 }
 
-export default useResponsiveSidevar;
+export default useResponsiveSidebar;

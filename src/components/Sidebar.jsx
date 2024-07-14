@@ -4,7 +4,7 @@ import SidebarExplorer from "./SidebarExplorer";
 
 function Sidebar({ isLargeScreen, isSmallScreen, toggleSidebar, close }) {
   const getAsideClass = () => {
-    let baseClass = "p-2 bg-white";
+    let baseClass = "scrollbar-hidden p-2 bg-white overflow-y-auto";
 
     if (isLargeScreen) {
       baseClass += " lg:block";
