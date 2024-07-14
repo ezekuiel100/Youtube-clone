@@ -1,8 +1,13 @@
 import PageHeader from "./PageHeader";
 import { SidebarItems, SmallSidebarItems } from "./SidebarItems";
 import SidebarExplorer from "./SidebarExplorer";
+import { useContext } from "react";
+import { Context } from "../context/SidebarContext";
 
-function Sidebar({ isLargeScreen, isSmallScreen, toggleSidebar, close }) {
+function Sidebar() {
+  const { isLargeScreen, isSmallScreen, toggleSidebar, close } =
+    useContext(Context);
+
   const getAsideClass = () => {
     let baseClass = "scrollbar-hidden p-2 bg-white overflow-y-auto";
 

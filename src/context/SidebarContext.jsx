@@ -1,6 +1,8 @@
-import { useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
-function useResponsiveSidebar() {
+export const Context = createContext({});
+
+function SidebarContext({ children }) {
   const [isLargeScreen, setIsLargeScreen] = useState(true);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -32,7 +34,15 @@ function useResponsiveSidebar() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  return { isLargeScreen, isSmallScreen, close, toggleSidebar };
+  return (
+    <>
+      <Context.Provider
+        value={{ isLargeScreen, isSmallScreen, close, toggleSidebar }}
+      >
+        {children}
+      </Context.Provider>
+    </>
+  );
 }
 
-export default useResponsiveSidebar;
+export default SidebarContext;

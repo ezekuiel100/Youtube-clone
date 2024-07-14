@@ -1,6 +1,10 @@
 import { Bars3Icon } from "@heroicons/react/24/outline";
+import { useContext } from "react";
+import { Context } from "../context/SidebarContext";
 
-function PageHeader({ toggleSidebar }) {
+function PageHeader() {
+  const { toggleSidebar } = useContext(Context);
+
   return (
     <div className="flex gap-3 flex-shrink-0">
       <Bars3Icon
