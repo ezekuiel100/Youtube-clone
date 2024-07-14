@@ -1,8 +1,8 @@
 import { createContext, useEffect, useState } from "react";
 
-export const Context = createContext({});
+export const SidebarContext = createContext({});
 
-function SidebarContext({ children }) {
+function SidebarProvider({ children }) {
   const [isLargeScreen, setIsLargeScreen] = useState(true);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -36,13 +36,13 @@ function SidebarContext({ children }) {
 
   return (
     <>
-      <Context.Provider
+      <SidebarContext.Provider
         value={{ isLargeScreen, isSmallScreen, close, toggleSidebar }}
       >
         {children}
-      </Context.Provider>
+      </SidebarContext.Provider>
     </>
   );
 }
 
-export default SidebarContext;
+export default SidebarProvider;
