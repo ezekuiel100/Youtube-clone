@@ -4,8 +4,7 @@ import Nav from "./components/Nav";
 import Sidebar from "./components/Sidebar";
 
 function App() {
-  const [toggle, setToggle] = useState(true);
-  const [isLargeScreen, setIsLargeScreen] = useState(false);
+  const [isLargeScreen, setIsLargeScreen] = useState(true);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
@@ -14,6 +13,12 @@ function App() {
       setIsSmallScreen((value) => !value);
     } else {
       setIsLargeScreen((value) => !value);
+    }
+  }
+
+  function close() {
+    if (screenWidth < 1024) {
+      setIsSmallScreen(false);
     }
   }
 
@@ -35,7 +40,12 @@ function App() {
     <div className="relative">
       <Nav toggleSidebar={toggleSidebar} />
       <div className="flex items-start relative">
-        <Sidebar isLargeScreen={isLargeScreen} isSmallScreen={isSmallScreen} />
+        <Sidebar
+          isLargeScreen={isLargeScreen}
+          isSmallScreen={isSmallScreen}
+          toggleSidebar={toggleSidebar}
+          close={close}
+        />
         <Main />
       </div>
     </div>

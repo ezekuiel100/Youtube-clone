@@ -1,96 +1,51 @@
-import {
-  Bars3Icon,
-  FilmIcon,
-  ForwardIcon,
-  HomeIcon,
-} from "@heroicons/react/24/outline";
-import { useEffect, useState } from "react";
+import PageHeader from "./PageHeader";
+import { SidebarItems, SmallSidebarItems } from "./SidebarItems";
+import SidebarExplorer from "./SidebarExplorer";
 
-const explorer = [
-  "Trending",
-  "Music",
-  "Movies",
-  "Lives",
-  "Gaming",
-  "News",
-  "Sports",
-  "Courses",
-  "Fashion & Beauty",
-  "Podcasts",
-];
+function Sidebar({ isLargeScreen, isSmallScreen, toggleSidebar, close }) {
+  const getAsideClass = () => {
+    let baseClass = "p-2 bg-white";
 
-function Sidebar({ isLargeScreen, isSmallScreen }) {
+    if (isLargeScreen) {
+      baseClass += " lg:block";
+    } else {
+      baseClass += " lg:hidden";
+    }
+
+    if (isSmallScreen) {
+      baseClass += " block fixed top-0 left-0 z-50 h-full";
+    } else {
+      baseClass += " hidden";
+    }
+
+    return baseClass;
+  };
+
   return (
     <>
-      <aside
-        className={`p-2 bg-white ${isLargeScreen ? "lg:block" : "lg:hidden"} ${
-          isSmallScreen ? "block absolute top-0 left-0 z-50 h-full" : "hidden"
-        }   `}
-      >
+      <aside className={getAsideClass()}>
+        {isSmallScreen && <PageHeader toggleSidebar={toggleSidebar} />}
+
         <div className="pb-2 border-b-2">
-          <a
-            href="#"
-            className="p-2 text-base hover:bg-gray-100 flex items-center gap-2 rounded-md transition-all"
-          >
-            <HomeIcon className="h-6" />
-            Home
-          </a>
-          <a
-            href="#"
-            className="p-2 text-base flex flex-row items-center gap-2 hover:bg-gray-100 rounded-md transition-all"
-          >
-            <FilmIcon className="h-6" />
-            Shorts
-          </a>
-          <a
-            href="#"
-            className="p-2 text-base flex flex-row items-center gap-2 hover:bg-gray-100 rounded-md transition-all"
-          >
-            <ForwardIcon className="h-6" />
-            Subscriptions
-          </a>
+          <SidebarItems />
         </div>
 
-        <div className="py-2">
-          <h3 className="font-bold">Explorer</h3>
-          {explorer.map((el, i) => (
-            <a
-              href="#"
-              key={i}
-              className="block p-2 hover:bg-gray-100 rounded-md transition-all "
-            >
-              {el}
-            </a>
-          ))}
-        </div>
+        <SidebarExplorer />
       </aside>
+
+      {isSmallScreen && (
+        <div
+          className="lg:hidden fixed inset-0 bg-black/50 z-20 "
+          onClick={close}
+        ></div>
+      )}
 
       <aside
         className={`hidden sm:block sticky top-[74px] bg-white ${
           isLargeScreen ? "lg:hidden" : "lg:block"
         }`}
       >
-        <a
-          href="#"
-          className="p-2 text-sm hover:bg-gray-100 flex flex-col items-center gap-2 rounded-md transition-all"
-        >
-          <HomeIcon className="h-6" />
-          Home
-        </a>
-        <a
-          href="#"
-          className="p-2 text-sm lg:text-base flex flex-col items-center gap-2 hover:bg-gray-100 rounded-md transition-all"
-        >
-          <FilmIcon className="h-6" />
-          Shorts
-        </a>
-        <a
-          href="#"
-          className="p-2 text-sm lg:text-base flex flex-col items-center gap-2 hover:bg-gray-100 rounded-md transition-all"
-        >
-          <ForwardIcon className="h-6" />
-          Subscriptions
-        </a>
+        <SmallSidebarItems />
       </aside>
     </>
   );

@@ -1,22 +1,10 @@
-import {
-  BellIcon,
-  VideoCameraIcon,
-  Bars3Icon,
-} from "@heroicons/react/24/outline";
+import { BellIcon, VideoCameraIcon } from "@heroicons/react/24/outline";
+import PageHeader from "./PageHeader";
 
 function Nav({ toggleSidebar }) {
   return (
-    <nav className="flex justify-between gap-16 p-4 sticky top-0 bg-white z-50">
-      <div className="flex gap-3 flex-shrink-0">
-        <Bars3Icon
-          className="h-10 hover:bg-gray-200 p-2 rounded-full cursor-pointer "
-          onClick={toggleSidebar}
-        />
-        <a href="/" className="">
-          <img src="src/assets/logo.png" className="h-10 rounded-full "></img>
-        </a>
-      </div>
-
+    <nav className="flex justify-between gap-16 p-4 sticky top-0 bg-white z-10">
+      <PageHeader toggleSidebar={toggleSidebar} />
       <input
         type="text"
         placeholder="Buscar video"
