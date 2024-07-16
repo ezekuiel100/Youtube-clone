@@ -10,7 +10,7 @@ function Sidebar() {
 
   const getAsideClass = () => {
     let baseClass =
-      "lg:sticky lg:top-[74px] w-56 pb-16 scrollbar-hidden p-2 bg-white overflow-y-auto";
+      "lg:sticky lg:top-[74px] h-[calc(100vh-74px)] w-56 pb-16 scrollbar-hidden p-2 bg-white overflow-y-auto";
 
     if (isLargeScreen) {
       baseClass += " lg:block";
