@@ -8,7 +8,7 @@ function App() {
     <SidebarProvider>
       <div className="relative">
         <Nav />
-        <div className="flex items-start relative">
+        <div className="flex items-start ">
           <Sidebar />
           <Main />
         </div>

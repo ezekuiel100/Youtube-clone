@@ -9,7 +9,8 @@ function Sidebar() {
     useContext(SidebarContext);
 
   const getAsideClass = () => {
-    let baseClass = "scrollbar-hidden p-2 bg-white overflow-y-auto";
+    let baseClass =
+      "lg:sticky lg:top-[74px] w-56 pb-16 scrollbar-hidden p-2 bg-white overflow-y-auto";
 
     if (isLargeScreen) {
       baseClass += " lg:block";

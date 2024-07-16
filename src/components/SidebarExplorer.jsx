@@ -13,7 +13,7 @@ const explorer = [
 
 function SidebarExplorer() {
   return (
-    <div className="py-2">
+    <div className="py-2 ">
       <h3 className="font-bold">Explorer</h3>
       {explorer.map((el, i) => (
         <a
