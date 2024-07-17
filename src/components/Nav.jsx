@@ -1,10 +1,10 @@
 import { BellIcon, VideoCameraIcon } from "@heroicons/react/24/outline";
-import PageHeader from "./PageHeader";
+import PageLogo from "./PageLogo";
 
 function Nav() {
   return (
-    <nav className="flex justify-between gap-16 p-4 sticky top-0 bg-white z-10">
-      <PageHeader />
+    <nav className="flex justify-between gap-16 p-4 sticky top-0 bg-white ">
+      <PageLogo />
       <input
         type="text"
         placeholder="Buscar video"

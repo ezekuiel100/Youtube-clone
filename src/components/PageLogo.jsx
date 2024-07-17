@@ -2,7 +2,7 @@ import { Bars3Icon } from "@heroicons/react/24/outline";
 import { useContext } from "react";
 import { SidebarContext } from "../context/SidebarContext";
 
-function PageHeader() {
+function PageLogo() {
   const { toggleSidebar } = useContext(SidebarContext);
 
   return (
@@ -18,4 +18,4 @@ function PageHeader() {
   );
 }
 
-export default PageHeader;
+export default PageLogo;

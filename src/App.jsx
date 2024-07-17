@@ -6,12 +6,10 @@ import SidebarProvider from "./context/SidebarContext";
 function App() {
   return (
     <SidebarProvider>
-      <div className="relative">
-        <Nav />
-        <div className="flex items-start ">
-          <Sidebar />
-          <Main />
-        </div>
+      <Nav />
+      <div className="flex items-start ">
+        <Sidebar />
+        <Main />
       </div>
     </SidebarProvider>
   );
