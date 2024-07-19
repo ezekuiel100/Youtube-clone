@@ -8,28 +8,13 @@ function Sidebar() {
   const { isLargeScreen, isSmallScreen, toggleSidebar, close } =
     useContext(SidebarContext);
 
-  const getAsideClass = () => {
-    let baseClass =
-      "lg:sticky lg:top-[74px] absolute top-0 w-56 pb-16 scrollbar-hidden p-2 bg-white overflow-y-auto";
-
-    if (isLargeScreen) {
-      baseClass += " lg:block";
-    } else {
-      baseClass += " lg:hidden";
-    }
-
-    if (isSmallScreen) {
-      baseClass += " block fixed top-0 left-0 z-50 h-full";
-    } else {
-      baseClass += " hidden";
-    }
-
-    return baseClass;
-  };
-
   return (
     <>
-      <aside className={getAsideClass()}>
+      <aside
+        className={`lg:sticky lg:top-[74px] absolute top-0 w-56 pb-16 scrollbar-hidden p-2 bg-white overflow-y-auto ${
+          isLargeScreen ? "lg:block" : "lg:hidden"
+        } ${isSmallScreen ? "block fixed top-0 left-0 z-50 h-full" : "hidden"}`}
+      >
         {isSmallScreen && <PageHeader toggleSidebar={toggleSidebar} />}
 
         <div className="pb-2 border-b-2">
