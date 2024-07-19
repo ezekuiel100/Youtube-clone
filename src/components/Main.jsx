@@ -2,6 +2,7 @@ import { videos } from "../data/videos";
 import GridVideo from "./GridVideo";
 
 function Main() {
+  console.log(new Date("2023-08-29"));
   return (
     <div className="px-20 md:px-9 py-4 w-full grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-4 ">
       {videos.map((video, i) => (

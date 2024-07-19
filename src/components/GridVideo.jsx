@@ -1,5 +1,6 @@
 import formatDuration from "../utils/formatDuration";
 import { useEffect, useRef, useState } from "react";
+import { formatTimeAgo } from "../utils/formatTimeAgo";
 
 function GridVideo({ video }) {
   const [isVidePlaying, setIsVideoPlaying] = useState(false);
@@ -65,7 +66,7 @@ function GridVideo({ video }) {
 
           <div className="flex gap-2 text-gray-400">
             <p>{VIEWS_FORMATTER.format(views)} Views •</p>
-            <p>{postedAt}</p>
+            <p>{formatTimeAgo(postedAt)}</p>
           </div>
         </div>
       </div>
