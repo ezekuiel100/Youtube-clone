@@ -44,7 +44,7 @@ function VideoCard({ video }) {
         </div>
       </a>
       <div className="flex gap-2">
-        <a href="#">
+        <a href="#" className="flex-shrink-0">
           <img
             src="src/assets/profile.png"
             alt=""
