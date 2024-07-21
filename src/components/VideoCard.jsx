@@ -2,7 +2,7 @@ import formatDuration from "../utils/formatDuration";
 import { useEffect, useRef, useState } from "react";
 import { formatTimeAgo } from "../utils/formatTimeAgo";
 
-function GridVideo({ video }) {
+function VideoCard({ video }) {
   const [isVidePlaying, setIsVideoPlaying] = useState(false);
   const videoRef = useRef(null);
 
@@ -38,7 +38,7 @@ function GridVideo({ video }) {
             ref={videoRef}
             src={`${videoUrl}`}
             className={`absolute inset-0  ${
-              isVidePlaying ? "opacity-100" : "opacity-0"
+              isVidePlaying ? "delay-700 opacity-100" : "opacity-0"
             }`}
           />
         </div>
@@ -74,4 +74,4 @@ function GridVideo({ video }) {
   );
 }
 
-export default GridVideo;
+export default VideoCard;

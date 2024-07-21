@@ -1,4 +1,4 @@
-import Main from "./components/Main";
+import VideoGrid from "./components/VideoGrid";
 import Nav from "./components/Nav";
 import Sidebar from "./components/Sidebar";
 import SidebarProvider from "./context/SidebarContext";
@@ -9,7 +9,7 @@ function App() {
       <Nav />
       <div className="flex items-start">
         <Sidebar />
-        <Main />
+        <VideoGrid />
       </div>
     </SidebarProvider>
   );

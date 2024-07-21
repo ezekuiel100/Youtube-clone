@@ -1,17 +1,16 @@
 import { videos } from "../data/videos";
-import GridVideo from "./GridVideo";
+import VideoCard from "./VideoCard";
 
-function Main() {
-  console.log(new Date("2023-08-29"));
+function VideoGrid() {
   return (
     <div className="px-20 md:px-9 py-4 w-full grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-4 ">
       {videos.map((video, i) => (
         <div key={i}>
-          <GridVideo video={video} />
+          <VideoCard video={video} />
         </div>
       ))}
     </div>
   );
 }
 
-export default Main;
+export default VideoGrid;
